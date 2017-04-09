@@ -23,16 +23,7 @@ export default class AthletePage extends React.Component {
             <img src={`/img/${athlete.image}`}/>
             <h2 className="name">{athlete.name}</h2>
           </div>
-          <section className="description">
-            Olympic medalist from <strong><Flag code={athlete.country} showName="true"/></strong>,
-            born in {athlete.birth} (Find out more on <a href={athlete.link} target="_blank">Wikipedia</a>).
-          </section>
-          <section className="medals">
-            <p>Winner of <strong>{athlete.medals.length}</strong> medals:</p>
-            <ul>{
-              athlete.medals.map((medal, i) => <Medal key={i} {...medal}/>)
-            }</ul>
-          </section>
+
         </div>
         <div className="navigateBack">
           <Link to="/">« Back to the index</Link>
